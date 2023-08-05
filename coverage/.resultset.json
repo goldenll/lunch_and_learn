@@ -5,9 +5,9 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -16,10 +16,10 @@
         "lines": [
           1,
           1,
-          5,
-          5,
-          5,
-          60,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -31,7 +31,7 @@
           1,
           null,
           1,
-          3,
+          2,
           null,
           null
         ]
@@ -46,11 +46,11 @@
           null,
           null,
           1,
-          61,
-          61,
-          61,
-          61,
-          61,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -59,73 +59,19 @@
         "lines": [
           1,
           1,
-          3,
+          2,
           null,
           null,
           1,
-          3,
-          3,
+          2,
+          2,
           null,
           null,
           1,
-          3,
-          3,
+          2,
+          2,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/recipe_service.rb": {
-        "lines": [
-          1,
-          1,
-          6,
-          6,
-          6,
-          null,
-          null,
-          null,
-          1,
-          6,
-          6,
-          null,
-          null,
-          1,
-          6,
-          null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          4,
-          1,
-          1,
-          null,
-          3,
-          null,
-          4,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/serializers/recipe_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null
         ]
       },
@@ -143,6 +89,35 @@
         "lines": [
           0,
           0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
+        "lines": [
           0,
           0
         ],
@@ -180,8 +155,41 @@
         ],
         "branches": {
         }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/serializers/recipe_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/recipe_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1691266953
+    "timestamp": 1691267355
   }
 }

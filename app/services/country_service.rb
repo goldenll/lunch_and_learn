@@ -13,4 +13,3 @@ class CountryService
     country = response.sample
   end
 end
-
