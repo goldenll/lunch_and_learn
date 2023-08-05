@@ -37,5 +37,3 @@ module LunchAndLearn
     config.api_only = true
   end
 end
-
-UNSPLASH_KEY: KXGPdzW7pghAeWUVP5oxhZcLCiDad1VPN_tBNIC8p80
