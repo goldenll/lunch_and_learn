@@ -3,7 +3,6 @@ require "rails_helper"
 RSpec.describe "recipe service" do 
   it "returns a list of recipes", :vcr do 
     search = RecipeService.new.recipe_search("Canada")
-    # require 'pry'; binding.pry
     recipe1 = search[:hits].first[:recipe]
 
     expect(search).to be_a(Hash)
