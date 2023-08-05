@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe RecipeFacade do 
   it "returns recipes for a given country" do 
-    recipes = RecipeFacade.get_recipes("Canada")
+    recipes = RecipeFacade.new.get_recipes("Canada")
 
     expect(recipes).to be_a(Array)
     expect(recipes.first).to be_a(Recipe)
