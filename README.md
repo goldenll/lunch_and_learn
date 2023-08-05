@@ -28,6 +28,6 @@ Things you may want to cover:
 # Resources: 
 Edamam API key and application id: https://developer.edamam.com/edamam-recipe-api
  - API endpoint: "https://api.edamam.com/api/recipes/v2?type=public&q=#{country}"
-
-REST Countries API: https://restcountries.com/#api-endpoints-v3-all (no API key required)
- - API endpoint: https://restcountries.com/v3.1/all
+<br>
+REST Countries API: https://restcountries.com/#api-endpoints-v3-all (no API key required)<br>
+ - API endpoint: "https://restcountries.com/v3.1/all"
