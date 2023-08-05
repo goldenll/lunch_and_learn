@@ -1,6 +1,17 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/country_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/recipe_facade.rb": {
         "lines": [
           1,
@@ -10,6 +21,17 @@
           2,
           40,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/poros/country.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
           null,
           null
         ]
@@ -29,6 +51,26 @@
           41,
           41,
           41,
+          null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/country_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
           null,
           null
         ]
@@ -79,26 +121,6 @@
           1,
           1,
           1,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/country_service.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
           null
         ]
       },
@@ -155,6 +177,6 @@
         }
       }
     },
-    "timestamp": 1691263353
+    "timestamp": 1691265493
   }
 }
