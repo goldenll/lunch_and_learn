@@ -10,8 +10,8 @@ class VideoService
     JSON.parse(response.body, symbolize_names: true)
   end
   
-  def video_search(query, ENV["YOUTUBE_KEY"])
+  def video_search(query)
+    key = ENV["YOUTUBE_KEY"]
     get_url("/youtube/v3/search?part=snippet&q=%40MrHistory1%2C%20#{query}&key=#{key}")
   end
 end
-# test 

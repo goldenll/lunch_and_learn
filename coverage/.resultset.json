@@ -71,6 +71,26 @@
           2,
           2,
           null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/video_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -190,6 +210,6 @@
         }
       }
     },
-    "timestamp": 1691267355
+    "timestamp": 1691271828
   }
 }
