@@ -26,3 +26,4 @@ Things you may want to cover:
 * ...
 
 Edamam API key and application id: https://developer.edamam.com/edamam-recipe-api
+ - API endpoint: "https://api.edamam.com/api/recipes/v2?type=public&q=#{country}"
