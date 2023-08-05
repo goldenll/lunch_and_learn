@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "get recipes", type: :request do
   describe "happy paths" do
-    xit "returns a list of recipes for a given country" do
+    it "returns a list of recipes for a given country" do
       get "/api/v1/recipes?country=thailand"
 
       expect(response).to be_successful
@@ -34,7 +34,7 @@ RSpec.describe "get recipes", type: :request do
       expect(recipes[:data].first[:attributes]).to_not have_key(:dishType)
     end
 
-    xit "returns a list of recipes for a random country when country is not specified" do
+    it "returns a list of recipes for a random country when country is not specified" do
       get "/api/v1/recipes?country=random"
 
       expect(response).to be_successful
@@ -67,7 +67,7 @@ RSpec.describe "get recipes", type: :request do
   end
   
   describe "sad paths" do
-    xit "returns an empty array when there are no search matches" do
+    it "returns an empty array when there are no search matches" do
       get "/api/v1/recipes?country=notarealcountry"
 
       expect(response).to be_successful
@@ -81,7 +81,7 @@ RSpec.describe "get recipes", type: :request do
       expect(recipes[:data].count).to eq(0)
     end
 
-    xit "returns an empty array when the country parameter is an empty string" do
+    it "returns an empty array when the country parameter is an empty string" do
       get "/api/v1/recipes?country=''"
 
       expect(response).to be_successful
