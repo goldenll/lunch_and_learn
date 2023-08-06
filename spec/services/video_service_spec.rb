@@ -4,7 +4,7 @@ RSpec.describe "video service" do
   it "returns videos ", :vcr do 
     videos = VideoService.new.video_search("Canada")
     video1 = videos[:items].first
-require 'pry'; binding.pry
+
     expect(videos).to be_a(Hash)
     expect(videos[:pageInfo][:totalResults]).to be_an(Integer)
     expect(videos).to have_key(:items)

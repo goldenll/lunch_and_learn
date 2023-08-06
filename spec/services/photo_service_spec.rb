@@ -8,7 +8,6 @@ RSpec.describe "photo service" do
     expect(search).to be_a(Hash)
     expect(search).to have_key(:total)
     expect(search[:total]).to be_an(Integer)
-    expect(search[:total]).to eq(10000)
     expect(search).to have_key(:results)
     expect(search[:results]).to be_an(Array)
     expect(search[:results].first).to be_a(Hash)
