@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 05 Aug 2023 21:34:12 GMT
+      - Sat, 05 Aug 2023 23:08:12 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -45,14 +45,48 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "g7gbLiIX7qj-tkJDNWyTchY4Ok8",
+          "etag": "7eX1af_cMPSidHzzg9bBRboEfMQ",
           "nextPageToken": "CAUQAA",
           "regionCode": "US",
           "pageInfo": {
-            "totalResults": 100,
+            "totalResults": 101,
             "resultsPerPage": 5
           },
           "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "_8ZnXSThyhTC8L3fo5sR2aGDAzM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "e_okM7Mig6s"
+              },
+              "snippet": {
+                "publishedAt": "2019-10-13T18:35:32Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Canada",
+                "description": "Pictures Requiring Attribution: Buzzzsherman: https://en.wikipedia.org/wiki/File:Journal.pone.0001596.g004.png Dylan Kereluk ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-10-13T18:35:32Z"
+              }
+            },
             {
               "kind": "youtube#searchResult",
               "etag": "nvXclZGE2_yCvYuyttQu1Xd-xn8",
@@ -123,36 +157,36 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "ETvQPz7OaTT_pMumpPjQ7VgAQ5Y",
+              "etag": "Dlgr0AtCNu19VQ1ZfnU96TbeKzs",
               "id": {
-                "kind": "youtube#video",
-                "videoId": "lBdwWOtOWMg"
+                "kind": "youtube#playlist",
+                "playlistId": "PLpKWJOT4qiS-VCo-IjaWQAQ2M31SrCuwL"
               },
               "snippet": {
-                "publishedAt": "2021-04-30T23:59:44Z",
-                "channelId": "UCeRHXarBeUrwbRP52AMr7bQ",
-                "title": "Episode 1:  Canada - A Peoples History - When the World Began - 15,000 BC - 1850 AD",
-                "description": "Episode 1: 15 000 BCE to 1800 CE. The opening episode of this series ranges across the continent, looking back more than ...",
+                "publishedAt": "2023-07-17T19:32:29Z",
+                "channelId": "UCKDPEYcGqCaI-Fxdp_PHR8g",
+                "title": "History of Canada",
+                "description": "",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/lBdwWOtOWMg/default.jpg",
+                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/lBdwWOtOWMg/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/lBdwWOtOWMg/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
-                "channelTitle": "Act of Knowledge",
+                "channelTitle": "Maryam Hekmat",
                 "liveBroadcastContent": "none",
-                "publishTime": "2021-04-30T23:59:44Z"
+                "publishTime": "2023-07-17T19:32:29Z"
               }
             },
             {
@@ -188,42 +222,8 @@ http_interactions:
                 "liveBroadcastContent": "none",
                 "publishTime": "2019-03-16T16:00:01Z"
               }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "yNxkaFW49HYqeMuAjz8wjVw7DuM",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "tiu8hlmHADA"
-              },
-              "snippet": {
-                "publishedAt": "2021-05-13T04:52:06Z",
-                "channelId": "UCOFcY-c4QmypQxTkg9DkfeA",
-                "title": "History of Canada",
-                "description": "The history of Canada covers the period from the arrival of the Paleo-Indians thousands of years ago to the present day. Prior to ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/tiu8hlmHADA/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/tiu8hlmHADA/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/tiu8hlmHADA/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "History Media-HD",
-                "liveBroadcastContent": "none",
-                "publishTime": "2021-05-13T04:52:06Z"
-              }
             }
           ]
         }
-  recorded_at: Sat, 05 Aug 2023 21:34:12 GMT
+  recorded_at: Sat, 05 Aug 2023 23:08:12 GMT
 recorded_with: VCR 6.2.0
