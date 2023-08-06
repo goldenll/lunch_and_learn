@@ -2,70 +2,77 @@ require "rails_helper"
 
 RSpec.describe "get learning resources", type: :request do
   describe "happy paths" do
-    xit "returns a video related to the searched country" do
-      get "/api/v1/learning_resources?country=laos"
+    it "returns video and photo data related to the searched country" do
+      get "/api/v1/learning_resources?country=france"
 
       expect(response).to be_successful
-      video = JSON.parse(response.body, symbolize_names: true)
+      lr = JSON.parse(response.body, symbolize_names: true)
 
-      expect(video).to be_a(Hash)
-      expect(video).to have_key(:data)
-      expect(video[:data]).to be_a(Hash)
-      expect(video[:data]).to have_key(:attributes)
-      expect(video[:data][:attributes]).to be_a(Hash)
-      expect(video[:data][:attributes]).to have_key(:id)
-      expect(video[:data][:attributes][:id]).to be(nil)
-      expect(video[:data][:attributes]).to have_key(:title)
-      expect(video[:data][:attributes][:title]).to be_a(String)
-      expect(video[:data][:attributes]).to have_key(:video_id)
-      expect(video[:data][:attributes][:video_id]).to be_a(String)
+      expect(lr).to be_a(Hash)
+      expect(lr).to have_key(:data)
+      expect(lr[:data]).to be_a(Hash)
+      expect(lr[:data]).to have_key(:attributes)
+      expect(lr[:data][:attributes]).to be_a(Hash)
+      expect(lr[:data][:attributes]).to have_key(:id)
+      expect(lr[:data][:attributes][:id]).to eq(nil)
+      expect(lr[:data][:attributes]).to have_key(:country)
+      expect(lr[:data][:attributes][:country]).to be_a(String)
+      expect(lr[:data][:attributes][:country]).to eq("france")
+      expect(lr[:data][:attributes]).to have_key(:video)
+      expect(lr[:data][:attributes][:video]).to be_a(Hash)
 
-      expect(video[:data][:attributes]).to_not have_key(:publishedAt)
-      expect(video[:data][:attributes]).to_not have_key(:channelId)
-      expect(video[:data][:attributes]).to_not have_key(:thumbnails)
-      expect(video[:data][:attributes]).to_not have_key(:channelTitle)
+      expect(lr[:data][:attributes][:video]).to have_key(:title)
+      expect(lr[:data][:attributes][:video][:title]).to be_a(String)
+      expect(lr[:data][:attributes][:video]).to have_key(:video_id)
+      expect(lr[:data][:attributes][:video][:video_id]).to be_a(String)
+      expect(lr[:data][:attributes][:video]).to_not have_key(:publishedAt)
+      expect(lr[:data][:attributes][:video]).to_not have_key(:channelId)
+      expect(lr[:data][:attributes][:video]).to_not have_key(:thumbnails)
+      expect(lr[:data][:attributes][:video]).to_not have_key(:channelTitle)
+
+      expect(lr[:data][:attributes]).to have_key(:images)
+      expect(lr[:data][:attributes][:images]).to be_an(Array)
+      expect(lr[:data][:attributes][:images][0]).to have_key(:alt_tag)
+      expect(lr[:data][:attributes][:images][0][:alt_tag]).to be_a(String)
+      expect(lr[:data][:attributes][:images][0]).to have_key(:url)
+      expect(lr[:data][:attributes][:images][0][:url]).to be_a(String)
+      expect(lr[:data][:attributes][:images][0]).to_not have_key(:slug)
+      expect(lr[:data][:attributes][:images][0]).to_not have_key(:color)
+      expect(lr[:data][:attributes][:images][0]).to_not have_key(:breadcrumbs)
+      expect(lr[:data][:attributes][:images][0]).to_not have_key(:height)
+    end
+  end
+  
+  describe "sad paths" do
+    it "returns an empty hash when the country parameter is an empty string" do
+      get "/api/v1/learning_resources?country=''"
+
+      expect(response).to be_successful
+
+      lr = JSON.parse(response.body, symbolize_names: true)
+
+      expect(lr).to be_a(Hash)
+      expect(lr).to have_key(:data)
+      expect(lr[:data]).to be_an(Hash)
+      expect(lr[:data]).to eq({})
+      expect(lr[:data].count).to eq(0)
     end
 
-    # it "returns a list of recipes for a random country when country is not specified" do
-    #   get "/api/v1/recipes?country=random"
+    it "if no images are found, the image key should point to an empty object" do
+      get "/api/v1/learning_resources?country=Nameofcountry"
 
-    #   expect(response).to be_successful
+      expect(response).to be_successful
 
-    #   recipes = JSON.parse(response.body, symbolize_names: true)
+      lr = JSON.parse(response.body, symbolize_names: true)
 
-    #   expect(recipes).to be_a(Hash)
-
-      
-    # end
-  # end
-  
-  # describe "sad paths" do
-  #   it "returns an empty array when there are no search matches" do
-  #     get "/api/v1/recipes?country=notarealcountry"
-
-  #     expect(response).to be_successful
-
-  #     recipes = JSON.parse(response.body, symbolize_names: true)
-
-  #     expect(recipes).to be_a(Hash)
-  #     expect(recipes).to have_key(:data)
-  #     expect(recipes[:data]).to be_an(Array)
-  #     expect(recipes[:data]).to eq([])
-  #     expect(recipes[:data].count).to eq(0)
-  #   end
-
-  #   it "returns an empty array when the country parameter is an empty string" do
-  #     get "/api/v1/recipes?country=''"
-
-  #     expect(response).to be_successful
-
-  #     recipes = JSON.parse(response.body, symbolize_names: true)
-
-  #     expect(recipes).to be_a(Hash)
-  #     expect(recipes).to have_key(:data)
-  #     expect(recipes[:data]).to be_an(Array)
-  #     expect(recipes[:data]).to eq([])
-  #     expect(recipes[:data].count).to eq(0)
-  #   end
+      expect(lr).to have_key(:data)
+      expect(lr[:data]).to have_key(:attributes)
+      expect(lr[:data][:attributes]).to have_key(:id)
+      expect(lr[:data][:attributes]).to have_key(:country)
+      expect(lr[:data][:attributes][:country]).to eq("Nameofcountry")
+      expect(lr[:data][:attributes]).to have_key(:images)
+      expect(lr[:data][:attributes][:images]).to be_an(Array)
+      expect(lr[:data][:attributes][:images]).to eq([])
+    end
   end
 end

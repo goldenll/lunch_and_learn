@@ -2,10 +2,11 @@ module Api
   module V1
     class LearningResourcesController < ApplicationController
       def index
-        @video = VideoFacade.new.get_videos(params[:country]).first
-        # require 'pry'; binding.pry
-        render json: VideoSerializer.new(@video)
-
+        if params[:country] == "''" 
+          render json: { data: {} }
+        else
+          render json: LearningResourceSerializer.new(LearningResourceFacade.new.get_resources(params[:country]))
+        end
       end
     end
   end
