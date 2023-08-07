@@ -1,17 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/country_facade.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/country_service.rb": {
         "lines": [
           1,
@@ -25,19 +14,10 @@
           null,
           null,
           1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/poros/country.rb": {
-        "lines": [
-          1,
-          1,
+          0,
+          0,
           null,
           null,
-          1,
           1,
           1,
           null,
@@ -72,7 +52,7 @@
           0,
           0,
           0,
-          null,
+          0,
           0,
           0,
           0,
@@ -167,6 +147,25 @@
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/air_quality_facade.rb": {
         "lines": [
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/country_facade.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           0,
           0,
           0,
@@ -300,6 +299,21 @@
           null,
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/poros/country.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0,
@@ -508,6 +522,6 @@
         }
       }
     },
-    "timestamp": 1691423302
+    "timestamp": 1691424593
   }
 }

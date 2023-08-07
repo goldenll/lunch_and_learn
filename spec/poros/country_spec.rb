@@ -2,14 +2,14 @@ require "rails_helper"
 
 RSpec.describe Country do 
   it "exists and has attributes" do 
-    data = {
+    data = [{
       :name=>{
         :common=>"Canada"
       }, 
       :capital=> [
         "Paris"
       ]
-    }
+    }]
     
     country = Country.new(data)
 

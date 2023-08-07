@@ -12,4 +12,8 @@ class CountryService
     response = get_url("/v3.1/all")
     country = response.sample
   end
+
+  def country_search(country)
+    response = get_url("/v3.1/name/#{country}")
+  end
 end

@@ -3,7 +3,7 @@ class Country
               :capital
 
   def initialize(data)
-    @name = data[:name][:common]
-    @capital = data[:capital].first
+    @name = data[0][:name][:common]
+    @capital = data[0][:capital].first
   end
 end
