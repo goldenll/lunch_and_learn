@@ -34,45 +34,38 @@ RSpec.describe "user registration", type: :request do
       expect(user[:data][:attributes][:api_key]).to be_a(String)
     end
   end
+
+  describe "sad paths" do
+    it "if a unique email address is not used for registration, an appropriate error message should be returned" do
+      user1 = create(:user, email: "goodboy@ruffruff.com")
+
+      new_user = {
+        "name": "Odell",
+        "email": "goodboy@ruffruff.com",
+        "password": "treats4lyf",
+        "password_confirmation": "treats4lyf"
+      }
+
+      post "/api/v1/users", params: new_user
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+      parsed_response = JSON.parse(response.body, symbolize_names: true)
+      expect(parsed_response[:email]).to include("has already been taken")
+    end
+
+    it "passwords do not match, an appropriate error message should be returned in the response" do
+      new_user = {
+        "name": "Odell",
+        "email": "goodboy@ruffruff.com",
+        "password": "treats4lyf",
+        "password_confirmation": "treatspls"
+      }
+
+      post "/api/v1/users", params: new_user
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+      parsed_response = JSON.parse(response.body, symbolize_names: true)
+      expect(parsed_response[:error]).to include("Passwords do not match")
+    end
+  end
 end
-
-
-  # Email addresses must be unique. If a unique email address is not used for registration, an appropriate error message should be returned in the response.
-  # If passwords do not match, an appropriate error message should be returned in the response.
-
-  
-  # describe "sad paths" do
-    # it "if a unique email address is not used for registration, an appropriate error message should be returned" do
-    #   get "/api/v1/learning_resources?country=Nameofcountry"
-
-    #   expect(response).to be_successful
-
-    #   lr = JSON.parse(response.body, symbolize_names: true)
-
-    #   expect(lr).to have_key(:data)
-    #   expect(lr[:data]).to have_key(:attributes)
-    #   expect(lr[:data][:attributes]).to have_key(:id)
-    #   expect(lr[:data][:attributes]).to have_key(:country)
-    #   expect(lr[:data][:attributes][:country]).to eq("Nameofcountry")
-    #   expect(lr[:data][:attributes]).to have_key(:images)
-    #   expect(lr[:data][:attributes][:images]).to be_an(Array)
-    #   expect(lr[:data][:attributes][:images]).to eq([])
-    # end
-
-    # it "passwords do not match, an appropriate error message should be returned in the response" do
-    #   get "/api/v1/learning_resources?country=Nameofcountry"
-
-    #   expect(response).to be_successful
-
-    #   lr = JSON.parse(response.body, symbolize_names: true)
-
-    #   expect(lr).to have_key(:data)
-    #   expect(lr[:data]).to have_key(:attributes)
-    #   expect(lr[:data][:attributes]).to have_key(:id)
-    #   expect(lr[:data][:attributes]).to have_key(:country)
-    #   expect(lr[:data][:attributes][:country]).to eq("Nameofcountry")
-    #   expect(lr[:data][:attributes]).to have_key(:images)
-    #   expect(lr[:data][:attributes][:images]).to be_an(Array)
-    #   expect(lr[:data][:attributes][:images]).to eq([])
-    # end
-  # end
