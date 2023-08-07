@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://youtube.googleapis.com/youtube/v3/search?API_KEY=AIzaSyAMeP7QAkn4khZ4GofmIfO5f9CXrv1nR_w&key=AIzaSyAMeP7QAkn4khZ4GofmIfO5f9CXrv1nR_w&part=snippet&q=@MrHistory1,%20Canada
+    uri: https://youtube.googleapis.com/youtube/v3/search?API_KEY=YOUTUBE_KEY&key=YOUTUBE_KEY&part=snippet&q=@MrHistory1,%20Canada
     body:
       encoding: US-ASCII
       string: ''
@@ -15,17 +15,17 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
       Vary:
       - Origin
       - Referer
       - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
       Date:
-      - Sat, 05 Aug 2023 23:08:12 GMT
+      - Mon, 07 Aug 2023 02:47:00 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -44,186 +44,17 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "kind": "youtube#searchListResponse",
-          "etag": "7eX1af_cMPSidHzzg9bBRboEfMQ",
-          "nextPageToken": "CAUQAA",
-          "regionCode": "US",
-          "pageInfo": {
-            "totalResults": 101,
-            "resultsPerPage": 5
-          },
-          "items": [
-            {
-              "kind": "youtube#searchResult",
-              "etag": "_8ZnXSThyhTC8L3fo5sR2aGDAzM",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "e_okM7Mig6s"
-              },
-              "snippet": {
-                "publishedAt": "2019-10-13T18:35:32Z",
-                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
-                "title": "A Super Quick History of Canada",
-                "description": "Pictures Requiring Attribution: Buzzzsherman: https://en.wikipedia.org/wiki/File:Journal.pone.0001596.g004.png Dylan Kereluk ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/e_okM7Mig6s/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Mr History",
-                "liveBroadcastContent": "none",
-                "publishTime": "2019-10-13T18:35:32Z"
+          "error": {
+            "code": 403,
+            "message": "The request cannot be completed because you have exceeded your \u003ca href=\"/youtube/v3/getting-started#quota\"\u003equota\u003c/a\u003e.",
+            "errors": [
+              {
+                "message": "The request cannot be completed because you have exceeded your \u003ca href=\"/youtube/v3/getting-started#quota\"\u003equota\u003c/a\u003e.",
+                "domain": "youtube.quota",
+                "reason": "quotaExceeded"
               }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "nvXclZGE2_yCvYuyttQu1Xd-xn8",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "O3JiNJ3AArk"
-              },
-              "snippet": {
-                "publishedAt": "2022-03-05T11:37:00Z",
-                "channelId": "UCocEEvI3mxNDo10ZAQJDTAQ",
-                "title": "The history of Canada explained in 20 minutes.",
-                "description": "The history of Canada covers the period from the arrival of the Paleo-Indians to North America thousands of years ago to the ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/O3JiNJ3AArk/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/O3JiNJ3AArk/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/O3JiNJ3AArk/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "History One",
-                "liveBroadcastContent": "none",
-                "publishTime": "2022-03-05T11:37:00Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "UJPHXu0L9EpX7k5xvIR9gXD8zlg",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "zz440EuFK8Q"
-              },
-              "snippet": {
-                "publishedAt": "2019-01-19T20:15:19Z",
-                "channelId": "UCp9ZtilfKJds0iWytR_pnOQ",
-                "title": "The history of Canada explained in 10 minutes",
-                "description": "The history of Canada explained in 10 minutes Support new videos on this channel on Patreon!",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/zz440EuFK8Q/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/zz440EuFK8Q/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/zz440EuFK8Q/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Epimetheus",
-                "liveBroadcastContent": "none",
-                "publishTime": "2019-01-19T20:15:19Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "Dlgr0AtCNu19VQ1ZfnU96TbeKzs",
-              "id": {
-                "kind": "youtube#playlist",
-                "playlistId": "PLpKWJOT4qiS-VCo-IjaWQAQ2M31SrCuwL"
-              },
-              "snippet": {
-                "publishedAt": "2023-07-17T19:32:29Z",
-                "channelId": "UCKDPEYcGqCaI-Fxdp_PHR8g",
-                "title": "History of Canada",
-                "description": "",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Maryam Hekmat",
-                "liveBroadcastContent": "none",
-                "publishTime": "2023-07-17T19:32:29Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "8gdxtrsTjOql1jRP2d3IVHRj0dU",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "J04aoVjtsBo"
-              },
-              "snippet": {
-                "publishedAt": "2019-03-16T16:00:01Z",
-                "channelId": "UC7JrMLRDJLUh5BPBYykMcrQ",
-                "title": "Canada History - Timeline and Animation in 5 Minutes",
-                "description": "Learn the history of Canada in 5 minutes in an animation. Please check out our other animations about history #canada #history.",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/J04aoVjtsBo/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "History on Maps",
-                "liveBroadcastContent": "none",
-                "publishTime": "2019-03-16T16:00:01Z"
-              }
-            }
-          ]
+            ]
+          }
         }
-  recorded_at: Sat, 05 Aug 2023 23:08:12 GMT
+  recorded_at: Mon, 07 Aug 2023 02:47:00 GMT
 recorded_with: VCR 6.2.0

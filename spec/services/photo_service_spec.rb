@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "photo service" do 
-  it "returns a list of photos by search term", :vcr do 
+  it "returns a list of photos by search term" do 
     search = PhotoService.new.photo_search("Canada")
     photo1 = search[:results].first
 
