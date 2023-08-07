@@ -73,6 +73,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('EDAMAM_APP_ID') { ENV['EDAMAM_APP_ID'] }
   config.filter_sensitive_data('YOUTUBE_KEY') { ENV['YOUTUBE_KEY'] }
   config.configure_rspec_metadata!
+  config.default_cassette_options = { re_record_interval: 7.days }
   config.allow_http_connections_when_no_cassette = true
 end
 

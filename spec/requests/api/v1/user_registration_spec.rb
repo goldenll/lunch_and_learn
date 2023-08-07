@@ -13,6 +13,7 @@ RSpec.describe "user registration", type: :request do
       post "/api/v1/users", params: new_user
 
       expect(response).to be_successful
+      expect(response.status).to eq(201)
 
       user = JSON.parse(response.body, symbolize_names: true)
 
@@ -36,14 +37,29 @@ RSpec.describe "user registration", type: :request do
 end
 
 
-  # A successful request creates a user in your database, creates a password digest, and generates a unique api key associated with that user, with a 201 status code.
-  # Use bcrypt to authenticate and create a password digest for a new user.
   # Email addresses must be unique. If a unique email address is not used for registration, an appropriate error message should be returned in the response.
   # If passwords do not match, an appropriate error message should be returned in the response.
 
   
   # describe "sad paths" do
-    # it "if no images are found, the image key should point to an empty object" do
+    # it "if a unique email address is not used for registration, an appropriate error message should be returned" do
+    #   get "/api/v1/learning_resources?country=Nameofcountry"
+
+    #   expect(response).to be_successful
+
+    #   lr = JSON.parse(response.body, symbolize_names: true)
+
+    #   expect(lr).to have_key(:data)
+    #   expect(lr[:data]).to have_key(:attributes)
+    #   expect(lr[:data][:attributes]).to have_key(:id)
+    #   expect(lr[:data][:attributes]).to have_key(:country)
+    #   expect(lr[:data][:attributes][:country]).to eq("Nameofcountry")
+    #   expect(lr[:data][:attributes]).to have_key(:images)
+    #   expect(lr[:data][:attributes][:images]).to be_an(Array)
+    #   expect(lr[:data][:attributes][:images]).to eq([])
+    # end
+
+    # it "passwords do not match, an appropriate error message should be returned in the response" do
     #   get "/api/v1/learning_resources?country=Nameofcountry"
 
     #   expect(response).to be_successful
