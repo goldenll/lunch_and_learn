@@ -1,4 +1,4 @@
-class LearningResourceSerializer
+class AirQualitySerializer
   include JSONAPI::Serializer
-  attributes :city, :aqi, :pm25_concentration, :co_concentration
+  attributes :id, :city, :aqi, :pm25_concentration, :co_concentration
 end
