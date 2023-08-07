@@ -83,31 +83,20 @@ RSpec.describe "get air quality", type: :request do
       expect(aq_data[:data][:attributes][:co_concentration]).to be_a(Float)
     end
 
-    xit "will give you air quality information for a random country if no country parameter is passed in" do
-      get "/api/v1/air_quality?country=random"
-
-      expect(response).to be_successful
-
-      recipes = JSON.parse(response.body, symbolize_names: true)
-
-
-    end
-
   end
   
-  describe "sad paths" do
-    xit "returns an empty array when the country passed in is not valid" do
-      get "/api/v1/air_quality?country=notarealcountry"
+  # describe "sad paths" do
+  #   it "returns an empty array when the country passed in is not valid" do
+  #     get "/api/v1/air_quality?country=notarealcountry"
 
-      expect(response).to be_successful
+  #     expect(response).to_not be_successful
+  #     expect(response.status).to eq(422)
 
-      recipes = JSON.parse(response.body, symbolize_names: true)
+  #     sad_aq = JSON.parse(response.body, symbolize_names: true)
 
-      expect(recipes).to be_a(Hash)
-      expect(recipes).to have_key(:data)
-      expect(recipes[:data]).to be_an(Array)
-      expect(recipes[:data]).to eq([])
-      expect(recipes[:data].count).to eq(0)
-    end
-  end
+  #     expect(sad_aq).to be_a(Hash)
+  #     expect(sad_aq).to have_key(:error)
+  #     expect(sad_aq[:error]).to eq("Country not found")
+  #   end
+  # end
 end
