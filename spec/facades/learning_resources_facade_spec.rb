@@ -5,7 +5,7 @@ RSpec.describe LearningResourceFacade do
     lr = LearningResourceFacade.new.get_resources("Canada")
 
     expect(lr).to be_a(LearningResource)
-    expect(lr.id).to eq(nil)
+    expect(lr.id).to eq("null")
     expect(lr.country).to eq("Canada")
   end
 end

@@ -13,20 +13,6 @@ class Api::V1::UsersController < ApplicationController
       render json: @new_user.errors, status: :unprocessable_entity
     end
   end
-  
-
-  # def create
-  #   if params[:password] == params[:password_confirmation]
-  #     @new_user = User.create(user_params)
-  #     if @new_user.save
-  #       render json: UserSerializer.new(@new_user), status: :created
-  #     else
-  #       render json: @new_user.errors, status: :unprocessable_entity
-  #     end
-  #   else
-  #     render json: @new_user.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   private
 

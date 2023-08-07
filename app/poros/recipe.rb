@@ -6,7 +6,7 @@ class Recipe
               :image
 
   def initialize(data, country)
-    @id = nil
+    @id = "null"
     @title = data[:recipe][:label]
     @url = data[:recipe][:url]
     @country = country

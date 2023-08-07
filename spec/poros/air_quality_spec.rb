@@ -15,6 +15,7 @@ RSpec.describe AirQuality do
     aq= AirQuality.new(data, "Paris")
 
     expect(aq).to be_an(AirQuality)
+    expect(aq.id).to eq("null")
     expect(aq.city).to eq("Paris")
     expect(aq.aqi).to eq(35)
     expect(aq.pm25_concentration).to eq(3.15)

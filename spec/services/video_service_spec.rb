@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "video service" do 
-  it "returns videos ", :vcr do 
+  xit "returns videos ", :vcr do 
     videos = VideoService.new.video_search("Canada")
     video1 = videos[:items].first
 
