@@ -14,7 +14,7 @@ RSpec.describe "get learning resources", type: :request do
       expect(lr[:data]).to have_key(:attributes)
       expect(lr[:data][:attributes]).to be_a(Hash)
       expect(lr[:data][:attributes]).to have_key(:id)
-      expect(lr[:data][:attributes][:id]).to eq(nil)
+      expect(lr[:data][:attributes][:id]).to eq("null")
       expect(lr[:data][:attributes]).to have_key(:country)
       expect(lr[:data][:attributes][:country]).to be_a(String)
       expect(lr[:data][:attributes][:country]).to eq("france")

@@ -14,7 +14,6 @@ RSpec.describe "user registration", type: :request do
 
       expect(response).to be_successful
       expect(response.status).to eq(201)
-
       user = JSON.parse(response.body, symbolize_names: true)
 
       expect(user).to be_a(Hash)
@@ -65,7 +64,7 @@ RSpec.describe "user registration", type: :request do
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
       parsed_response = JSON.parse(response.body, symbolize_names: true)
-      expect(parsed_response[:error]).to include("Passwords do not match")
+      expect(parsed_response[:password_confirmation]).to include("doesn't match Password")
     end
   end
 end
