@@ -83,4 +83,19 @@ RSpec.describe "get air quality", type: :request do
       expect(aq_data[:data][:attributes][:co_concentration]).to be_a(Float)
     end
   end
+  
+  describe "sad paths" do
+    it "returns a relevant error message when the country passed in is not valid" do
+      get "/api/v1/air_quality?country=notarealcountry"
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+
+      sad_aq = JSON.parse(response.body, symbolize_names: true)
+
+      expect(sad_aq).to be_a(Hash)
+      expect(sad_aq).to have_key(:error)
+      expect(sad_aq[:error]).to eq("Country not found")
+    end
+  end
 end
