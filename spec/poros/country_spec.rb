@@ -5,12 +5,16 @@ RSpec.describe Country do
     data = {
       :name=>{
         :common=>"Canada"
-      }
+      }, 
+      :capital=> [
+        "Paris"
+      ]
     }
     
     country = Country.new(data)
 
     expect(country).to be_a(Country)
     expect(country.name).to eq("Canada")
+    expect(country.capital).to eq("Paris")
   end
 end

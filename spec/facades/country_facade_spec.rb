@@ -6,5 +6,6 @@ RSpec.describe CountryFacade do
 
     expect(country).to be_a(Country)
     expect(country.name).to be_a(String)
+    expect(country.capital).to be_a(String)
   end
 end
