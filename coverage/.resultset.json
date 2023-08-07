@@ -1,20 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/air_quality_service.rb": {
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/poros/air_quality.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
           null,
           null,
           null,
-          1,
-          1,
-          1,
           null,
-          null,
+          1,
+          1,
+          1,
           1,
           1,
           null,
@@ -118,6 +115,13 @@
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
         "lines": [
           0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/facades/air_quality_facade.rb": {
+        "lines": [
           0
         ],
         "branches": {
@@ -362,6 +366,28 @@
         "branches": {
         }
       },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/air_quality_service.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/services/country_service.rb": {
         "lines": [
           0,
@@ -450,6 +476,6 @@
         }
       }
     },
-    "timestamp": 1691420941
+    "timestamp": 1691421474
   }
 }
