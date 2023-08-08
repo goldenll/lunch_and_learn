@@ -46,3 +46,4 @@ Your team is working in a service-oriented architecture. The front-end will comm
  - This project used Rails 7.0.x, Ruby 3.1.1, and PostgreSQL
  - Gems used: RSpec, Capybara, Shoulda-Matchers, Orderly, Launchy, Faker, FactoryBot, bcrypt, jsonapi-serializer, Faraday, Figaro, SimpleCov, VCR, and WebMock
  - This is a solo project, that was completed alone without assistance from instructors, cohortmates, alumni, mentors, rocks, etc.
+ - More details about the project and its requirements can be found [here](https://backend.turing.edu/module3/projects/lunch_and_learn/index)
