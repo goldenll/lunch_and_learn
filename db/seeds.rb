@@ -28,7 +28,7 @@ favorite_1 = Favorite.create!(
 
 favorite_2 = Favorite.create!(
   country: "Mexico",
-  recipe_link: "www.spicyfoods.com",
+  recipe_link: "www.holafoods.com",
   recipe_title: "nachos",
   user_id: user_1.id
 )
