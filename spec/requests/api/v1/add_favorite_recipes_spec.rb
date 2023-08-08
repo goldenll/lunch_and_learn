@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "add favorites", type: :request do
   describe "happy paths" do
     it "adds recipes to a favorited list for a particular user" do
-      @user1 = create(:user, api_key: "jgn983hy48thw9begh98h4539h4" )
+      @user1 = create(:user )
 
       params = {
         "api_key": @user1.api_key,
@@ -25,24 +25,24 @@ RSpec.describe "add favorites", type: :request do
     end
   end
 
-  # describe "sad paths" do
-    # xit "returns an error if the API key is invalid" do
+  describe "sad paths" do
+    it "returns an error if the API key is invalid" do
       
-      # user1 = create(:user, api_key: "jgn983hy48thw9begh98h4539h4" )
+      user1 = create(:user )
 
-      # params = {
-      #   "api_key": "1234567890",
-      #   "country": "thailand",
-      #   "recipe_link": "https://www.tastingtable.com/.....",
-      #   "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-      # }
+      params = {
+        "api_key": "1234567890",
+        "country": "thailand",
+        "recipe_link": "https://www.tastingtable.com/.....",
+        "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
+      }
 
-      # post "/api/v1/favorites", params: params
+      post "/api/v1/favorites", params: params
 
-    #   expect(response).to_not be_successful
-    #   expect(response.status).to eq(401)
-    #   sad_response = JSON.parse(response.body, symbolize_names: true)
-    #   expect(sad_response).to have_key(:error)
-    # end
-  # end
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      sad_response = JSON.parse(response.body, symbolize_names: true)
+      expect(sad_response).to have_key(:error)
+    end
+  end
 end
