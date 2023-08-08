@@ -32,4 +32,11 @@ Your team is working in a service-oriented architecture. The front-end will comm
 **User Registration endpoint**: `POST /api/v1/users`<br>
 **User Log In endpoint**: `POST /api/v1/sessions`<br>
 **Add Favorite Recipes endpoint**: `POST /api/v1/favorites`<br>
-**Get User Favorites endpoint**: `GET /api/v1/favorites?api_key=<key>`
+**Get User Favorites endpoint**: `GET /api/v1/favorites?api_key=<key>`<br><br>
+
+<h3> How to install the project?</h3>
+
+- Fork and clone this repo
+- Run `bundle install`
+- Run `rails db:{create,migrate,seed}`
+- `bundle exec rspec` to run the test suite
