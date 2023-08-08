@@ -29,7 +29,7 @@ Your team is working in a service-oriented architecture. The front-end will comm
 **Unsplash API** key: [Unsplash API](https://unsplash.com/documentation#creating-a-developer-account)
 - API endpoint: https://api.unsplash.com/search/photos
 
-**User Registration endpoint**: `POST /api/v1/users`
-**User Log In endpoint**: `POST /api/v1/sessions`
-**Add Favorite Recipes endpoint**: `POST /api/v1/favorites`
+**User Registration endpoint**: `POST /api/v1/users`<br>
+**User Log In endpoint**: `POST /api/v1/sessions`<br>
+**Add Favorite Recipes endpoint**: `POST /api/v1/favorites`<br>
 **Get User Favorites endpoint**: `GET /api/v1/favorites?api_key=<key>`
