@@ -7,10 +7,11 @@ class User < ApplicationRecord
   validates :api_key, uniqueness: true
 
   has_secure_password
+  has_many :favorites
 
   private
 
   def generate_api_key
-    self.api_key = SecureRandom.hex(32)
+    self.api_key = SecureRandom.hex(27)
   end
 end

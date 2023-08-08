@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :learning_resources, only: %i[index]
       resources :users
       resources :sessions
+      resources :favorites
     end
   end
 end

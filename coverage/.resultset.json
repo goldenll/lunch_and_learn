@@ -63,6 +63,21 @@
           null
         ]
       },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/models/favorite.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/models/user.rb": {
         "lines": [
           1,
@@ -74,19 +89,13 @@
           1,
           null,
           1,
-          null,
           1,
           null,
           1,
-          8,
           null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/models/application_record.rb": {
-        "lines": [
           1,
-          1,
+          9,
+          null,
           null
         ]
       },
@@ -242,6 +251,35 @@
           null
         ]
       },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/api/v1/favorites_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/api/v1/learning_resources_controller.rb": {
         "lines": [
           1,
@@ -252,12 +290,6 @@
           2,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/laurengolden/turing_work/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       },
@@ -274,18 +306,11 @@
           1,
           null,
           1,
-          null,
           4,
           4,
           1,
           null,
           3,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -387,6 +412,6 @@
         }
       }
     },
-    "timestamp": 1691441658
+    "timestamp": 1691454590
   }
 }
