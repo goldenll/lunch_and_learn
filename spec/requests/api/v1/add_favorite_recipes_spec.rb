@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "add favorites", type: :request do
   describe "happy paths" do
     it "adds recipes to a favorited list for a particular user" do
-      @user1 = create(:user )
+      @user1 = create(:user)
 
       params = {
         "api_key": @user1.api_key,
@@ -28,7 +28,7 @@ RSpec.describe "add favorites", type: :request do
   describe "sad paths" do
     it "returns an error if the API key is invalid" do
       
-      user1 = create(:user )
+      user1 = create(:user)
 
       params = {
         "api_key": "1234567890",
